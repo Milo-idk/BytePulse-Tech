@@ -1,0 +1,156 @@
+/* CONTENEDOR PRINCIPAL */
+.domotica {
+    width: 85%;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #a855f7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.descripcion {
+    font-size: 15px;
+    color: #cfcfcf;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+/* GRID DE TARJETAS */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(168, 85, 247, 0.3);
+    border-color: #a855f7;
+}
+
+.card h2 {
+    font-size: 15px;
+    margin: 20px 20px 15px 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+.card p {
+    font-size: 13px;
+    color: #dcdcdc;
+    margin: 0 20px 20px 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.card button {
+    background: #a855f7;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 20px 20px 20px;
+    display: inline-block;
+}
+
+.card button:hover {
+    background: #9333ea;
+    transform: scale(1.05);
+}
+
+/* LÍNEAS DECORATIVAS */
+.background-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.background-lines::before,
+.background-lines::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #a855f7;
+    transform: rotate(45deg);
+    opacity: 0.15;
+}
+
+.background-lines::before {
+    top: -150px;
+    left: -150px;
+}
+
+.background-lines::after {
+    bottom: -150px;
+    right: -150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 26px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .background-lines::before,
+    .background-lines::after {
+        width: 300px;
+        height: 300px;
+    }
+}
