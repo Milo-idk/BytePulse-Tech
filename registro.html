@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - BytePulse Tech</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="registro.css">
+    <link rel="icon" type="image/x-icon" href="static/img/Logo.img.jpeg">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="static/img/Logo.img.jpeg" alt="Logo BytePulse" class="logo-img">
+        </a>
+        <a href="index.html" class="logo-text">BytePulse Tech</a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+            <li><a href="quienes.html">Quiénes somos</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="ayuda.html">Ayuda/PQR</a></li>
+            <li id="nav-login"><a href="login.html" class="btn-login">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="background-lines"></div>
+
+    <div class="form-container">
+        <h1 class="logo-text-form">BytePulse Tech</h1>
+        <h2>REGÍSTRATE</h2>
+
+        <form id="registroForm">
+
+            <label>Nombre Completo *</label>
+            <input type="text" placeholder="Ingresa tu nombre" required>
+
+            <label>Correo Electrónico *</label>
+            <input type="email" placeholder="Ingresa tu correo electrónico" required>
+
+            <label>Confirmar tu Correo Electrónico *</label>
+            <input type="email" placeholder="Confirma tu correo electrónico" required>
+
+            <label>Contraseña *</label>
+            <input type="password" placeholder="Ingresa tu contraseña" required>
+            <small>La contraseña debe contener mínimo 8 caracteres.</small>
+
+            <label>Confirma tu Contraseña *</label>
+            <input type="password" placeholder="Confirma tu contraseña" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terminos" required>
+                <label for="terminos">Acepto los términos y políticas de privacidad</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Registrarse</button>
+            <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
+
+            <div class="links">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="login.html">Iniciar sesión</a>
+            </div>
+
+        </form>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <a href="index.html">
+                <img src="static/img/Logo.img.jpeg" alt="Logo Footer" class="footer-logo-img">
+            </a>
+            <a href="index.html" class="footer-text-link">
+                <h2>BytePulse Tech</h2>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Enlaces</h3>
+            <a href="politicas.html">Términos y condiciones</a>
+            <a href="derechos.html">Derechos de la página</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contáctanos</h3>
+            <a href="ayuda.html">Ayuda/PQR</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>Redes sociales</h3>
+            <div class="footer-social-icons">
+                <a href="mailto:Atencionalcliente@bytepulse_tech.com.co">
+                    <img src="static/img/gmail.png" alt="Gmail">
+                </a>
+                <a href="#">
+                    <img src="static/img/facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="static/img/ig.jpeg" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="static/img/x.jpeg" alt="X">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 BytePulse Tech - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!-- Script para verificar sesión -->
+<script>
+    const usuario = localStorage.getItem('usuarioBytePulse');
+    
+    if (usuario) {
+        const navLogin = document.getElementById('nav-login');
+        navLogin.innerHTML = `
+            <span class="user-name">👤 ${usuario}</span>
+            <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+        `;
+    }
+
+    function cerrarSesion() {
+        localStorage.removeItem('usuarioBytePulse');
+        window.location.href = 'index.html';
+    }
+
+    // Script para manejar el registro
+    document.getElementById('registroForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Aquí puedes agregar la lógica de registro
+        
+        // Redireccionar al login
+        window.location.href = 'login.html';
+    });
+</script>
+
+</body>
+</html>

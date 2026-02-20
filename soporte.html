@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Técnicos - BytePulse Tech</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="soporte.css">
+        <link rel="icon" type="image/x-icon" href="static/img/Logo.img.jpeg">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="static/img/Logo.img.jpeg" alt="Logo BytePulse" class="logo-img">
+            </a>
+            <a href="index.html" class="logo-text">BytePulse Tech</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Servicios</a></li>
+                <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                <li><a href="quienes.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="ayuda.html">Ayuda/PQR</a></li>
+                <li id="nav-login"><a href="login.html" class="btn-login">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="background-lines"></div>
+
+        <section class="soporte">
+            <h1 class="title">SERVICIOS TÉCNICOS</h1>
+
+            <p class="descripcion">
+                El soporte técnico es el servicio especializado encargado de brinda asistencia,
+                mantenimiento y solución de problemas relacionados con equipos tecnológicos,
+                sistemas informáticos y redes.
+            </p>
+
+            <div class="cards-container">
+
+                <div class="card">
+                    <h2>COMPUTADORES Y LAPTOPS</h2>
+                    <div class="card-img">
+                        <img src="https://placehold.co/400x200/302b63/white?text=Computadores" alt="Computadores y laptops">
+                    </div>
+                    <p>
+                        Ofrecemos soporte técnico profesional para hogares y empresas,
+                        mantenimiento preventivo, instalación y configuración de redes,
+                        optimización de sistemas y asistencia remota o presencial.
+                    </p>
+                    <button>VER MÁS</button>
+                </div>
+
+                <div class="card">
+                    <h2>SERVIDORES</h2>
+                    <div class="card-img">
+                        <img src="https://placehold.co/400x200/302b63/white?text=Servidores" alt="Servidores">
+                    </div>
+                    <p>
+                        Transformamos tu espacio con soluciones de domótica que permiten
+                        controlar iluminación, cámaras y climatización desde tu smartphone
+                        o asistentes virtuales.
+                    </p>
+                    <button>VER MÁS</button>
+                </div>
+
+                <div class="card">
+                    <h2>REDES (ROUTERS, SWITCHES)</h2>
+                    <div class="card-img">
+                        <img src="https://placehold.co/400x200/302b63/white?text=Redes" alt="Redes">
+                    </div>
+                    <p>
+                        Instalación y configuración de redes LAN, cableado estructurado,
+                        optimización de señal WiFi y seguridad de red para hogares y empresas.
+                    </p>
+                    <button>VER MÁS</button>
+                </div>
+
+                <div class="card">
+                    <h2>SOFTWARE Y SISTEMAS OPERATIVOS</h2>
+                    <div class="card-img">
+                        <img src="https://placehold.co/400x200/302b63/white?text=Software" alt="Software">
+                    </div>
+                    <p>
+                        Instalación de sistemas operativos, programas, antivirus,
+                        copias de seguridad y mantenimiento preventivo del sistema.
+                    </p>
+                    <button>VER MÁS</button>
+                </div>
+
+                <div class="card">
+                    <h2>IMPRESORAS Y PERIFÉRICOS</h2>
+                    <div class="card-img">
+                        <img src="https://placehold.co/400x200/302b63/white?text=Impresoras" alt="Impresoras">
+                    </div>
+                    <p>
+                        Configuración e instalación de impresoras, escáneres y periféricos,
+                        solución de errores y mantenimiento especializado.
+                    </p>
+                    <button>VER MÁS</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="static/img/Logo.img.jpeg" alt="Logo Footer" class="footer-logo-img">
+                </a>
+                <a href="index.html" class="footer-text-link">
+                    <h2>BytePulse Tech</h2>
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Enlaces</h3>
+                <a href="politicas.html">Términos y condiciones</a>
+                <a href="derechos.html">Derechos de la página</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <a href="ayuda.html">Ayuda/PQR</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Redes sociales</h3>
+                <div class="footer-social-icons">
+                    <a href="mailto:Atencionalcliente@bytepulse_tech.com.co">
+                        <img src="static/img/gmail.png" alt="Gmail">
+                    </a>
+                    <a href="#">
+                        <img src="static/img/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#">
+                        <img src="static/img/ig.jpeg" alt="Instagram">
+                    </a>
+                    <a href="#">
+                        <img src="static/img/x.jpeg" alt="X">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BytePulse Tech - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script para verificar sesión -->
+    <script>
+        const usuario = localStorage.getItem('usuarioBytePulse');
+        
+        if (usuario) {
+            const navLogin = document.getElementById('nav-login');
+            navLogin.innerHTML = `
+                <span class="user-name">👤 ${usuario}</span>
+                <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+            `;
+        }
+
+        function cerrarSesion() {
+            localStorage.removeItem('usuarioBytePulse');
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>
