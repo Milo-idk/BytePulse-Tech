@@ -1,0 +1,321 @@
+/* Main centrado */
+main {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Fondo decorativo */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f0f2d, #1a1a3a);
+}
+
+/* Líneas tipo neón */
+.background::before,
+.background::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, transparent 45%, #a855f7 50%, transparent 55%);
+    transform: rotate(25deg);
+    opacity: 0.1;
+}
+
+.background::after {
+    transform: rotate(-25deg);
+    opacity: 0.08;
+}
+
+/* Contenedor */
+.container {
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo-title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #a855f7;
+    font-size: 28px;
+}
+
+/* Tarjeta */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    width: 100%;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(168, 85, 247, 0.2);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    text-align: left;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ddd;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus {
+    border-color: #a855f7;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.info {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Botones */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary {
+    background-color: #a855f7;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #9333ea;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+}
+
+.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Links */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.links a {
+    color: #a855f7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links span {
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card {
+        padding: 25px;
+    }
+
+    .logo-title {
+        font-size: 24px;
+    }
+}
+
+/* ================================
+   FOOTER PARA RECUPERAR.HTML
+   ================================= */
+
+/* Footer fijo en la parte inferior */
+.footer {
+    background: #0b0b15;
+    width: 100%;
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo del footer */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-text-link h2 {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.footer-text-link:hover h2 {
+    color: #a855f7;
+}
+
+/* Títulos */
+.footer h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #a855f7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Enlaces */
+.footer-links a {
+    display: block;
+    text-decoration: none;
+    color: #bbb;
+    margin-bottom: 8px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #a855f7;
+}
+
+/* Contacto */
+.footer-contact a {
+    display: block;
+    text-decoration: none;
+    color: #bbb;
+    margin-bottom: 8px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #a855f7;
+}
+
+/* Redes sociales */
+.footer-social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.footer-social-icons img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.footer-social-icons img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+    }
+}

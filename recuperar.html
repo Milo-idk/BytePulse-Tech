@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - BytePulse Tech</title>
+    <title>Recuperar Contraseña - BytePulse Tech</title>
+
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="recuperar.css">
     <link rel="icon" type="image/x-icon" href="static/img/Logo.img.jpeg">
 </head>
 <body>
@@ -31,38 +32,37 @@
     </header>
 
     <main>
-        <section class="login-section">
+        <div class="background"></div>
 
-            <h1 class="brand">BytePulse Tech</h1>
+        <div class="container">
+            <h1 class="logo-title">BytePulse Tech</h1>
 
-            <div class="login-card">
-                <h2>INICIAR SESIÓN</h2>
-
-                <form id="loginForm">
+            <div class="card">
+                <form>
                     <label for="email">CORREO ELECTRÓNICO *</label>
                     <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
 
-                    <label for="password">CONTRASEÑA *</label>
-                    <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+                    <p class="info">
+                        Ingresa el correo electrónico asociado a tu cuenta que deseas recuperar.
+                        <br>
+                        Recibirás un enlace para crear tu nueva contraseña.
+                    </p>
 
-                    <small>
-                        La contraseña debe contener mínimo 8 caracteres solo letras y números
-                    </small>
+                    <button type="submit" class="btn primary">Enviar</button>
+                    <button type="button" class="btn secondary" onclick="window.location.href='index.html'">Cancelar</button>
 
-                    <button type="submit">Iniciar sesión</button>
-
-                    <div class="login-links">
-                        <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
-                        <a href="registro.html">¿No tienes cuenta? REGÍSTRATE</a>
+                    <div class="links">
+                        <span>No tienes cuenta? <a href="registro.html">REGÍSTRATE</a></span>
+                        <a href="login.html">Iniciar sesión</a>
                     </div>
                 </form>
             </div>
-
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
     <div class="footer-container">
+        <!-- Logo -->
         <div class="footer-logo">
             <a href="index.html">
                 <img src="static/img/Logo.img.jpeg" alt="Logo Footer" class="footer-logo-img">
@@ -72,17 +72,20 @@
             </a>
         </div>
 
+        <!-- Enlaces -->
         <div class="footer-links">
             <h3>Enlaces</h3>
-            <a href="politicias.html">Términos y condiciones</a>
+            <a href="politicas.html">Términos y condiciones</a>
             <a href="derechos.html">Derechos de la página</a>
         </div>
 
+        <!-- Contacto -->
         <div class="footer-contact">
             <h3>Contáctanos</h3>
             <a href="ayuda.html">Ayuda/PQR</a>
         </div>
 
+        <!-- Redes sociales -->
         <div class="footer-social">
             <h3>Redes sociales</h3>
             <div class="footer-social-icons">
@@ -107,7 +110,8 @@
     </div>
 </footer>
 
-    <!-- Script para verificar sesión (mostrar opciones de logout si ya está logueado) -->
+
+    <!-- Script para verificar sesión -->
     <script>
         const usuario = localStorage.getItem('usuarioBytePulse');
         
@@ -123,18 +127,6 @@
             localStorage.removeItem('usuarioBytePulse');
             window.location.href = 'index.html';
         }
-
-        // Script para manejar el login
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const nombreUsuario = email.split('@')[0];
-            
-            localStorage.setItem('usuarioBytePulse', nombreUsuario);
-            
-            window.location.href = 'index.html';
-        });
     </script>
 
 </body>
