@@ -1,0 +1,214 @@
+/* SECCIÓN CONTACTO */
+.contact-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: #a855f7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* INFORMACIÓN */
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.logo-contact h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #a855f7;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* FORMULARIO */
+.contact-form {
+    flex: 1.5;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #a855f7;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Input file personalizado */
+.file-input {
+    padding: 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.file-input::file-selector-button {
+    background: #a855f7;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.file-input::file-selector-button:hover {
+    background: #9333ea;
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #a855f7;
+    cursor: pointer;
+}
+
+/* Botón */
+.contact-form button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #a855f7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background: #9333ea;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-title {
+        font-size: 26px;
+    }
+
+    .contact-info, 
+    .contact-form {
+        min-width: 100%;
+    }
+}
+
+/* (Tu CSS anterior se mantiene igual hasta .contact-info) */
+
+/* Redes sociales con iconos */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.social-item:hover {
+    color: #a855f7;
+    transform: translateX(5px);
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Footer social icons (para el index y contacto) */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: 0.3s;
+    filter: grayscale(100%);
+}
+
+.footer-social-icons img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}

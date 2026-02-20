@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - BytePulse Tech</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="static/img/Logo.img.jpeg" alt="Logo BytePulse" class="logo-img">
+            </a>
+            <a href="index.html" class="logo-text">BytePulse Tech</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                <li><a href="quienes.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="ayuda.html">Ayuda/PQR</a></li>
+                <li id="nav-login"><a href="login.html" class="btn-login">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+
+            <h1 class="contact-title">Contáctanos</h1>
+
+            <div class="contact-container">
+
+                <!-- INFORMACIÓN IZQUIERDA -->
+                <div class="contact-info">
+                    <div class="logo-contact">
+                        <h2>BytePulse Tech</h2>
+                    </div>
+
+                    <!-- Redes sociales con imágenes -->
+                    <div class="social-links">
+                        <a href="mailto:Atencionalcliente@bytepulse_tech.com.co" class="social-item">
+                            <img src="static/img/gmail.png" alt="Gmail" class="social-icon">
+                            <span>Atencionalcliente@bytepulse_tech.com.co</span>
+                        </a>
+                        
+                        <a href="#" class="social-item">
+                            <img src="static/img/facebook.png" alt="Facebook" class="social-icon">
+                            <span>BytePulse Tech</span>
+                        </a>
+                        
+                        <a href="#" class="social-item">
+                            <img src="static/img/ig.jpeg" alt="Instagram" class="social-icon">
+                            <span>@BytePulse Tech</span>
+                        </a>
+                        
+                        <a href="#" class="social-item">
+                            <img src="static/img/x.jpeg" alt="X" class="social-icon">
+                            <span>@BytePulse Tech</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="text" placeholder="Asunto" required>
+
+                        <textarea placeholder="Mensaje (contenido de la solicitud)" rows="4" required></textarea>
+
+                        <input type="file" class="file-input">
+
+                        <div class="checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">Acepto los términos y políticas de privacidad</label>
+                        </div>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="static/img/Logo.img.jpeg" alt="Logo Footer" class="footer-logo-img">
+                </a>
+                <a href="index.html" class="footer-text-link">
+                    <h2>BytePulse Tech</h2>
+                </a>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces</h3>
+                <a href="politicias.html">Términos y condiciones</a>
+                <a href="#">Derechos de la página</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <a href="ayuda.html">Ayuda/PQR</a>
+            </div>
+            <div class="footer-social">
+                <h3>Redes sociales</h3>
+                <div class="footer-social-icons">
+                    <a href="mailto:Atencionalcliente@bytepulse_tech.com.co"><img src="static/img/gmail.png" alt="Gmail"></a>
+                    <a href="#"><img src="static/img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="static/img/ig.jpeg" alt="Instagram"></a>
+                    <a href="#"><img src="static/img/x.jpeg" alt="X"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BytePulse Tech - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script para verificar sesión -->
+    <script>
+        const usuario = localStorage.getItem('usuarioBytePulse');
+        
+        if (usuario) {
+            const navLogin = document.getElementById('nav-login');
+            navLogin.innerHTML = `
+                <span class="user-name">👤 ${usuario}</span>
+                <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+            `;
+        }
+
+        function cerrarSesion() {
+            localStorage.removeItem('usuarioBytePulse');
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda / PQR - BytePulse Tech</title>
+   <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="ayuda.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="static/img/Logo.img.jpeg" alt="Logo BytePulse" class="logo-img">
+        </a>
+        <a href="index.html" class="logo-text">BytePulse Tech</a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+            <li><a href="quienes.html">Quiénes somos</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="ayuda.html">Ayuda/PQR</a></li>
+            <li id="nav-login"><a href="login.html" class="btn-login">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="help-section">
+
+        <h1 class="help-title">Ayuda/PQR</h1>
+
+        <div class="help-card">
+
+            <!-- Buscador -->
+            <div class="search-box">
+                <input type="text" placeholder="¿Cómo podemos ayudarte?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- COMPRAS -->
+            <h3>COMPRAS</h3>
+
+            <div class="help-item">
+                <span>
+                    <i class="fas fa-bag-shopping"></i>
+                    Administrar compras
+                </span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="help-item">
+                <span>
+                    <i class="fas fa-rotate-left"></i>
+                    Preguntas frecuentes sobre compras
+                </span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <!-- CUENTA -->
+            <h3>CUENTA</h3>
+
+            <div class="help-item">
+                <span>
+                    <i class="fas fa-user"></i>
+                    Administrar tu cuenta
+                </span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="help-item">
+                <span>
+                    <i class="fas fa-question-circle"></i>
+                    Necesitas ayuda para recuperar tu cuenta
+                </span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="help-item">
+                <span>
+                    <i class="fas fa-id-card"></i>
+                    Cambio de nombre y otros
+                </span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <!-- MÁS AYUDA -->
+            <h3>¿NECESITAS MÁS AYUDA?</h3>
+
+            <div class="help-item">
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    Contáctanos
+                </span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+        </div>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <a href="index.html">
+                <img src="static/img/Logo.img.jpeg" alt="Logo Footer" class="footer-logo-img">
+            </a>
+            <a href="index.html" class="footer-text-link">
+                <h2>BytePulse Tech</h2>
+            </a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Enlaces</h3>
+            <a href="politicias.html">Términos y condiciones</a>
+            <a href="#">Derechos de la página</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contáctanos</h3>
+            <a href="ayuda.html">Ayuda/PQR</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>Redes sociales</h3>
+            <div class="footer-social-icons">
+                <a href="mailto:Atencionalcliente@bytepulse_tech.com.co">
+                    <img src="static/img/gmail.png" alt="Gmail">
+                </a>
+                <a href="#">
+                    <img src="static/img/facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="static/img/ig.jpeg" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="static/img/x.jpeg" alt="X">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 BytePulse Tech - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!-- Script para verificar sesión -->
+<script>
+    const usuario = localStorage.getItem('usuarioBytePulse');
+    
+    if (usuario) {
+        const navLogin = document.getElementById('nav-login');
+        navLogin.innerHTML = `
+            <span class="user-name">👤 ${usuario}</span>
+            <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+        `;
+    }
+
+    function cerrarSesion() {
+        localStorage.removeItem('usuarioBytePulse');
+        window.location.href = 'index.html';
+    }
+</script>
+
+</body>
+</html>

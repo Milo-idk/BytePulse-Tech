@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Privacidad - BytePulse Tech</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="politicas.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="static/img/Logo.img.jpeg" alt="Logo BytePulse" class="logo-img">
+            </a>
+            <a href="index.html" class="logo-text">BytePulse Tech</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                <li><a href="quienes.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="ayuda.html">Ayuda/PQR</a></li>
+                <li id="nav-login"><a href="login.html" class="btn-login">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="privacy-section">
+
+            <div class="top-bar">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>PRIVACIDAD DE DATOS DEL USUARIO</span>
+            </div>
+
+            <div class="privacy-container">
+
+                <!-- TEXTO PRINCIPAL -->
+                <div class="privacy-text">
+                    <h1>CENTRO DE PRIVACIDAD DERECHO CIUDADANO</h1>
+                    <p>
+                        Te contamos cómo usamos y protegemos tus datos personales
+                        para mejorar nuestros servicios y ofrecerte una experiencia personalizada.
+                    </p>
+
+                    <div class="privacy-links">
+                        <span><i class="fa-solid fa-check-circle"></i> CONOCE TUS DERECHOS</span>
+                        <span><i class="fa-solid fa-check-circle"></i> ADMINISTRAR EL USO DE TUS DATOS</span>
+                    </div>
+                </div>
+
+                <!-- ICONO DERECHO -->
+                <div class="privacy-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+            </div>
+
+            <!-- TARJETAS -->
+            <div class="privacy-cards">
+
+                <div class="card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Cómo gestionamos tus datos personales</h3>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-gear"></i>
+                    <h3>Conoce cómo procesamos tus datos</h3>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Consulta preguntas frecuentes</h3>
+                </div>
+
+            </div>
+
+            <!-- SECCIÓN INFERIOR -->
+            <div class="privacy-bottom">
+
+                <div class="bottom-text">
+                    <h2>TÉRMINOS Y CONDICIONES AL INGRESAR A DERECHO CIUDADANO</h2>
+                    <p>
+                        Te contamos cómo usamos y protegemos tus datos personales para
+                        mejorar nuestros servicios y ofrecerte una experiencia personalizada.
+                    </p>
+
+                    <div class="bottom-links">
+                        <span><i class="fa-solid fa-circle-info"></i> Dónde puedes realizar una queja</span>
+                        <span><i class="fa-solid fa-circle-question"></i> Dónde ver tus datos cuando ingresas</span>
+                    </div>
+                </div>
+
+                <div class="bottom-icon">
+                    <i class="fa-solid fa-laptop-shield"></i>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="static/img/Logo.img.jpeg" alt="Logo Footer" class="footer-logo-img">
+                </a>
+                <a href="index.html" class="footer-text-link">
+                    <h2>BytePulse Tech</h2>
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Enlaces</h3>
+                <!-- ENLACE ACTUALIZADO A POLITICAS.HTML -->
+                <a href="politicas.html">Términos y condiciones</a>
+                <a href="#">Derechos de la página</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <a href="ayuda.html">Ayuda/PQR</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Redes sociales</h3>
+                <div class="footer-social-icons">
+                    <a href="mailto:Atencionalcliente@bytepulse_tech.com.co">
+                        <img src="static/img/gmail.png" alt="Gmail">
+                    </a>
+                    <a href="#">
+                        <img src="static/img/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#">
+                        <img src="static/img/ig.jpeg" alt="Instagram">
+                    </a>
+                    <a href="#">
+                        <img src="static/img/x.jpeg" alt="X">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BytePulse Tech - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script para verificar sesión -->
+    <script>
+        const usuario = localStorage.getItem('usuarioBytePulse');
+        
+        if (usuario) {
+            const navLogin = document.getElementById('nav-login');
+            navLogin.innerHTML = `
+                <span class="user-name">👤 ${usuario}</span>
+                <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+            `;
+        }
+
+        function cerrarSesion() {
+            localStorage.removeItem('usuarioBytePulse');
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>
