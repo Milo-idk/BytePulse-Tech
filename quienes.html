@@ -61,7 +61,7 @@
                 <div class="team-container">
 
                     <div class="team-card">
-                        <div class="team-img"></div>
+                        <img src="static\quienes\img-1.png" alt="Técnicos en mantenimiento de PC" class="team-photo">
                         <div class="team-info">
                             <h3>Técnicos en mantenimiento de PC</h3>
                             <span>BytePulse Tech</span>
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="team-card">
-                        <div class="team-img"></div>
+                        <img src="static\quienes\img.2.png" alt="Desarrolladores de software" class="team-photo">
                         <div class="team-info">
                             <h3>Desarrolladores de software a medida</h3>
                             <span>BytePulse Tech</span>
@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="team-card">
-                        <div class="team-img"></div>
+                        <img src="static\quienes\img-3.png" alt="Automatización de sistemas" class="team-photo">
                         <div class="team-info">
                             <h3>Automatización de sistemas</h3>
                             <span>BytePulse Tech</span>
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="team-card">
-                        <div class="team-img"></div>
+                        <img src="static/quienes/img-4.png" alt="Equipo de Domótica" class="team-photo">
                         <div class="team-info">
                             <h3>Equipo de Domótica</h3>
                             <span>BytePulse Tech</span>
@@ -112,7 +112,7 @@
 
         <div class="footer-links">
             <h3>Enlaces</h3>
-            <a href="politicias.html">Términos y condiciones</a>
+            <a href="politicas.html">Términos y condiciones</a>
             <a href="derechos.html">Derechos de la página</a>
         </div>
 
@@ -147,7 +147,6 @@
 
 <!-- Script para verificar sesión -->
 <script>
-    // Verificar si hay usuario logueado
     const usuario = localStorage.getItem('usuarioBytePulse');
     const email = localStorage.getItem('emailBytePulse');
     
@@ -159,7 +158,6 @@
         `;
     }
 
-    // Función para cerrar sesión
     function cerrarSesion() {
         localStorage.removeItem('usuarioBytePulse');
         localStorage.removeItem('emailBytePulse');
