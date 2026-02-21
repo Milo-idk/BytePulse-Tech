@@ -43,7 +43,7 @@
                     </p>
                 </div>
                 <div class="hero-image">
-                    <img src="https://placehold.co/600x400/302b63/white?text=Tech+Support" alt="Soporte Técnico">
+                    <img src="" alt="Soporte Técnico">
                 </div>
             </div>
         </section>
@@ -51,7 +51,7 @@
         <section class="cards">
             <div class="card">
                 <div class="card-img">
-                    <img src="https://placehold.co/300x200/a855f7/white?text=Soporte+Tecnico" alt="Soporte">
+                    <img src="static\index\img-1.png" alt="Soporte">
                 </div>
                 <h3>Soporte Técnico</h3>
                 <p>Soporte profesional para hogares y empresas.</p>
@@ -59,7 +59,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <img src="https://placehold.co/300x200/302b63/white?text=Domotica" alt="Domótica">
+                    <img src="static\index\img-2.png" alt="Domótica">
                 </div>
                 <h3>Domótica</h3>
                 <p>Automatización de hogares.</p>
@@ -67,7 +67,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <img src="https://placehold.co/300x200/24243e/white?text=CCTV" alt="CCTV">
+                    <img src="static\index\img-3.png" alt="CCTV">
                 </div>
                 <h3>CCTV y Videovigilancia</h3>
                 <p>Instalación de sistemas CCTV.</p>
@@ -142,26 +142,27 @@
     </div>
 </footer>
 
-    <!-- Script para verificar sesión -->
-    <script>
-        // Verificar si hay un usuario guardado
-        const usuario = localStorage.getItem('usuarioBytePulse');
-        
-        if (usuario) {
-            const navLogin = document.getElementById('nav-login');
-            // Cambiar el botón de "Iniciar sesión" por el nombre del usuario
-            navLogin.innerHTML = `
-                <span class="user-name">👤 ${usuario}</span>
-                <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
-            `;
-        }
+<!-- Script para verificar sesión -->
+<script>
+    // Verificar si hay usuario logueado
+    const usuario = localStorage.getItem('usuarioBytePulse');
+    const email = localStorage.getItem('emailBytePulse');
+    
+    if (usuario) {
+        const navLogin = document.getElementById('nav-login');
+        navLogin.innerHTML = `
+            <a href="user.html" class="user-name">👤 ${usuario}</a>
+            <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+        `;
+    }
 
-        // Función para cerrar sesión
-        function cerrarSesion() {
-            localStorage.removeItem('usuarioBytePulse');
-            window.location.href = 'index.html';
-        }
-    </script>
+    // Función para cerrar sesión
+    function cerrarSesion() {
+        localStorage.removeItem('usuarioBytePulse');
+        localStorage.removeItem('emailBytePulse');
+        window.location.href = 'index.html';
+    }
+</script>
 
     <script>
         // Contadores (tu código anterior)

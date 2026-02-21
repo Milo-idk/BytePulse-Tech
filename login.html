@@ -107,35 +107,37 @@
     </div>
 </footer>
 
-    <!-- Script para verificar sesión (mostrar opciones de logout si ya está logueado) -->
-    <script>
-        const usuario = localStorage.getItem('usuarioBytePulse');
+<!-- Script para verificar sesión y manejar login -->
+<script>
+    const usuario = localStorage.getItem('usuarioBytePulse');
+    
+    if (usuario) {
+        const navLogin = document.getElementById('nav-login');
+        navLogin.innerHTML = `
+            <a href="user.html" class="user-name">👤 ${usuario}</a>
+            <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+        `;
+    }
+
+    function cerrarSesion() {
+        localStorage.removeItem('usuarioBytePulse');
+        localStorage.removeItem('emailBytePulse');
+        window.location.href = 'index.html';
+    }
+
+    // Script para manejar el login
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        if (usuario) {
-            const navLogin = document.getElementById('nav-login');
-            navLogin.innerHTML = `
-                <span class="user-name">👤 ${usuario}</span>
-                <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
-            `;
-        }
-
-        function cerrarSesion() {
-            localStorage.removeItem('usuarioBytePulse');
-            window.location.href = 'index.html';
-        }
-
-        // Script para manejar el login
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const nombreUsuario = email.split('@')[0];
-            
-            localStorage.setItem('usuarioBytePulse', nombreUsuario);
-            
-            window.location.href = 'index.html';
-        });
-    </script>
+        const email = document.getElementById('email').value;
+        const nombreUsuario = email.split('@')[0];
+        
+        localStorage.setItem('usuarioBytePulse', nombreUsuario);
+        localStorage.setItem('emailBytePulse', email);
+        
+        window.location.href = 'index.html';
+    });
+</script>
 
 </body>
 </html>

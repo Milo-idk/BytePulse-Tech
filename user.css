@@ -1,5 +1,5 @@
 /* ================================
-   MAIN CENTRADO
+   MAIN
    ================================= */
 
 main {
@@ -7,12 +7,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
     position: relative;
 }
 
 /* ================================
-   FONDO DECORATIVO
+   FONDO NEÓN
    ================================= */
 
 .background {
@@ -27,7 +27,6 @@ main {
     background: linear-gradient(135deg, #14143b, #0d0d26);
 }
 
-/* Líneas neón diagonales */
 .background::before,
 .background::after {
     content: "";
@@ -45,127 +44,124 @@ main {
 }
 
 /* ================================
-   CONTENEDOR Y FORMULARIO
+   CONTENEDOR
    ================================= */
 
 .container {
-    text-align: center;
-    z-index: 2;
     width: 100%;
-    max-width: 420px;
+    max-width: 900px;
+    z-index: 2;
 }
 
-.logo-title {
-    margin-bottom: 30px;
-    font-weight: 500;
-    letter-spacing: 1px;
+/* ================================
+   USUARIO
+   ================================= */
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(168, 85, 247, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     color: #a855f7;
-    font-size: 28px;
+}
+
+.user-info h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+}
+
+.user-info p {
+    font-size: 13px;
+    color: #bbb;
+}
+
+.check {
+    margin-left: auto;
+    font-size: 24px;
+    color: #a855f7;
+}
+
+/* ================================
+   GRID DE TARJETAS
+   ================================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.08);
-    padding: 35px;
-    width: 100%;
+    padding: 25px 20px;
     border-radius: 15px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 10px 40px rgba(168, 85, 247, 0.2);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    text-align: left;
-}
-
-label {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #ddd;
-    display: block;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0 8px 0;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
-    font-size: 14px;
-    outline: none;
+    backdrop-filter: blur(10px);
     transition: 0.3s;
-}
-
-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-input:focus {
-    border-color: #a855f7;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
-}
-
-.info {
-    font-size: 11px;
-    color: #bbb;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
-
-/* Botones */
-.btn {
-    width: 100%;
-    padding: 12px;
-    border-radius: 25px;
-    border: none;
-    margin-bottom: 12px;
     cursor: pointer;
-    font-weight: 500;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.primary {
-    background-color: #a855f7;
-    color: white;
-}
-
-.primary:hover {
-    background-color: #9333ea;
-    transform: translateY(-2px);
-}
-
-.secondary {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ddd;
-}
-
-.secondary:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Links */
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: 13px;
-    margin-top: 15px;
+    border: 1px solid transparent;
     text-align: center;
 }
 
-.links a {
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+    border-color: #a855f7;
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 15px;
     color: #a855f7;
-    text-decoration: none;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.card p {
+    font-size: 12px;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+/* ================================
+   TEXTO BORRAR CUENTA
+   ================================= */
+
+.delete-text {
+    margin-top: 35px;
+    font-size: 14px;
+    text-align: center;
+    color: #bbb;
+}
+
+.delete-text span {
+    color: #ff4757;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.links a:hover {
+.delete-text span:hover {
     text-decoration: underline;
-}
-
-.links span {
-    color: #ccc;
 }
 
 /* ================================
@@ -297,7 +293,16 @@ input:focus {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Responsive */
+/* ================================
+   RESPONSIVE
+   ================================= */
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 700px) {
     .footer-container {
         flex-direction: column;
@@ -315,13 +320,18 @@ input:focus {
     }
 }
 
-/* Responsive formulario */
-@media (max-width: 480px) {
-    .card {
-        padding: 25px;
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
     }
-
-    .logo-title {
-        font-size: 24px;
+    
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .check {
+        margin-left: 0;
+        margin-top: 10px;
     }
 }

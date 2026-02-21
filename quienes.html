@@ -145,23 +145,27 @@
     </div>
 </footer>
 
-    <!-- Script para verificar sesión -->
-    <script>
-        const usuario = localStorage.getItem('usuarioBytePulse');
-        
-        if (usuario) {
-            const navLogin = document.getElementById('nav-login');
-            navLogin.innerHTML = `
-                <span class="user-name">👤 ${usuario}</span>
-                <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
-            `;
-        }
+<!-- Script para verificar sesión -->
+<script>
+    // Verificar si hay usuario logueado
+    const usuario = localStorage.getItem('usuarioBytePulse');
+    const email = localStorage.getItem('emailBytePulse');
+    
+    if (usuario) {
+        const navLogin = document.getElementById('nav-login');
+        navLogin.innerHTML = `
+            <a href="user.html" class="user-name">👤 ${usuario}</a>
+            <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
+        `;
+    }
 
-        function cerrarSesion() {
-            localStorage.removeItem('usuarioBytePulse');
-            window.location.href = 'index.html';
-        }
-    </script>
+    // Función para cerrar sesión
+    function cerrarSesion() {
+        localStorage.removeItem('usuarioBytePulse');
+        localStorage.removeItem('emailBytePulse');
+        window.location.href = 'index.html';
+    }
+</script>
 
 </body>
 </html>

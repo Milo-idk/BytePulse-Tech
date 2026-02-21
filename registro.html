@@ -65,7 +65,7 @@
             <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
 
             <div class="links">
-                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
                 <a href="login.html">Iniciar sesión</a>
             </div>
 
@@ -121,30 +121,24 @@
 
 <!-- Script para verificar sesión -->
 <script>
+    // Verificar si hay usuario logueado
     const usuario = localStorage.getItem('usuarioBytePulse');
+    const email = localStorage.getItem('emailBytePulse');
     
     if (usuario) {
         const navLogin = document.getElementById('nav-login');
         navLogin.innerHTML = `
-            <span class="user-name">👤 ${usuario}</span>
+            <a href="user.html" class="user-name">👤 ${usuario}</a>
             <a href="#" class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</a>
         `;
     }
 
+    // Función para cerrar sesión
     function cerrarSesion() {
         localStorage.removeItem('usuarioBytePulse');
+        localStorage.removeItem('emailBytePulse');
         window.location.href = 'index.html';
     }
-
-    // Script para manejar el registro
-    document.getElementById('registroForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Aquí puedes agregar la lógica de registro
-        
-        // Redireccionar al login
-        window.location.href = 'login.html';
-    });
 </script>
 
 </body>

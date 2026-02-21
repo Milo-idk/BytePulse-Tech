@@ -2,14 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayuda / PQR - BytePulse Tech</title>
-   <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Dashboard | BytePulse Tech</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="ayuda.css">
-    <link rel="icon" type="image/x-icon" href="static/img/Logo.img.jpeg">
-</head>
+    <link rel="stylesheet" href="user.css">
+    <link rel="icon" type="image/x-icon" href="static/img/Logo.img.jpeg">   
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></head>
 <body>
 
     <header>
@@ -33,82 +31,75 @@
 </header>
 
 <main>
-    <section class="help-section">
+    <div class="background"></div>
 
-        <h1 class="help-title">Ayuda/PQR</h1>
+    <div class="container">
 
-        <div class="help-card">
+        <!-- Usuario -->
+        <div class="user-info">
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div>
+                <h3 id="user-name">Usuario</h3>
+                <p id="user-email">correo@ejemplo.com</p>
+            </div>
+            <div class="check">
+                <i class="fas fa-check-circle"></i>
+            </div>
+        </div>
 
-            <!-- Buscador -->
-            <div class="search-box">
-                <input type="text" placeholder="¿Cómo podemos ayudarte?">
-                <button><i class="fas fa-search"></i></button>
+        <!-- Tarjetas -->
+        <div class="grid">
+
+            <div class="card">
+                <i class="fas fa-user-shield icon"></i>
+                <h4>Datos de tu cuenta</h4>
+                <p>Datos personales como nombre, correo electrónico</p>
             </div>
 
-            <!-- COMPRAS -->
-            <h3>COMPRAS</h3>
-
-            <div class="help-item">
-                <span>
-                    <i class="fas fa-bag-shopping"></i>
-                    Administrar compras
-                </span>
-                <i class="fas fa-chevron-right"></i>
+            <div class="card">
+                <i class="fas fa-id-card icon"></i>
+                <h4>Información personal</h4>
+                <p>Datos personales como nombre, correo electrónico</p>
             </div>
 
-            <div class="help-item">
-                <span>
-                    <i class="fas fa-rotate-left"></i>
-                    Preguntas frecuentes sobre compras
-                </span>
-                <i class="fas fa-chevron-right"></i>
+            <div class="card">
+                <i class="fas fa-file-alt icon"></i>
+                <h4>Mis solicitudes</h4>
+                <p>Historial de solicitudes realizadas</p>
             </div>
 
-            <!-- CUENTA -->
-            <h3>CUENTA</h3>
-
-            <div class="help-item">
-                <span>
-                    <i class="fas fa-user"></i>
-                    Administrar tu cuenta
-                </span>
-                <i class="fas fa-chevron-right"></i>
+            <div class="card">
+                <i class="fas fa-database icon"></i>
+                <h4>Datos de tu cuenta</h4>
+                <p>Gestión de datos almacenados</p>
             </div>
 
-            <div class="help-item">
-                <span>
-                    <i class="fas fa-question-circle"></i>
-                    Necesitas ayuda para recuperar tu cuenta
-                </span>
-                <i class="fas fa-chevron-right"></i>
+            <div class="card">
+                <i class="fas fa-user-cog icon"></i>
+                <h4>Configuración</h4>
+                <p>Preferencias de la cuenta</p>
             </div>
 
-            <div class="help-item">
-                <span>
-                    <i class="fas fa-id-card"></i>
-                    Cambio de nombre y otros
-                </span>
-                <i class="fas fa-chevron-right"></i>
-            </div>
-
-            <!-- MÁS AYUDA -->
-            <h3>¿NECESITAS MÁS AYUDA?</h3>
-
-            <div class="help-item">
-                <span>
-                    <i class="fas fa-envelope"></i>
-                    Contáctanos
-                </span>
-                <i class="fas fa-chevron-right"></i>
+            <div class="card">
+                <i class="fas fa-shield-alt icon"></i>
+                <h4>Seguridad</h4>
+                <p>Cambiar contraseña y seguridad</p>
             </div>
 
         </div>
 
-    </section>
+        <p class="delete-text">
+            Puedes <span>borrar tu cuenta</span> cuando quieras
+        </p>
+
+    </div>
 </main>
 
 <footer class="footer">
     <div class="footer-container">
+        <!-- Logo -->
         <div class="footer-logo">
             <a href="index.html">
                 <img src="static/img/Logo.img.jpeg" alt="Logo Footer" class="footer-logo-img">
@@ -118,17 +109,20 @@
             </a>
         </div>
 
+        <!-- Enlaces -->
         <div class="footer-links">
             <h3>Enlaces</h3>
-            <a href="politicias.html">Términos y condiciones</a>
+            <a href="politicas.html">Términos y condiciones</a>
             <a href="derechos.html">Derechos de la página</a>
         </div>
 
+        <!-- Contacto -->
         <div class="footer-contact">
             <h3>Contáctanos</h3>
             <a href="ayuda.html">Ayuda/PQR</a>
         </div>
 
+        <!-- Redes sociales -->
         <div class="footer-social">
             <h3>Redes sociales</h3>
             <div class="footer-social-icons">
